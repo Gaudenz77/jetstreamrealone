@@ -38,7 +38,7 @@
 
 
     <!-- Create a container for the content -->
-    <div id="contentContainer" class="row mx-0">
+    <div id="contentContainer" class="row">
         @foreach($gifts as $gift)
             <div class="col-md-3 mb-4"> <!-- Adjusted to col-md-3 -->
                 <div class="card">
