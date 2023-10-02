@@ -9,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     {{-- <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css"> --}}
+
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,400;0,800;0,900;1,200;1,400;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d4cbcb96c8.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Scripts -->
@@ -40,6 +41,8 @@
         
     </main>
 
+    
+
     <footer class="fixed-bottom pt-3 bg-secondary">
         <div class="container">
             <div class="row">
@@ -59,7 +62,17 @@
     </footer>
 
    <!-- Include Bootstrap JS, Popper.js, and FontAwesome (if not already included) -->
+   <script>
+    $(document).ready(function () {
+        $('#datepicker').datepicker({
+            format: 'yyyy-mm-dd', // Set the desired date format
+            autoclose: true, // Close the datepicker when a date is selected
+        });
+    });
+    </script>
+
+   
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@2.11.6/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
    </html>

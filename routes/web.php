@@ -46,5 +46,8 @@ Route::middleware([
     Route::get('/testsiteone', [PresentsController::class, 'index'])->name('testsiteone');
     Route::delete('/gifts/{gift}', [PresentsController::class, 'destroy'])->name('gifts.destroy');
 
+    Route::post('/filter', [PresentsController::class, 'filter'])->name('gifts.filter');
+
+
 
 });

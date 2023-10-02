@@ -80,6 +80,61 @@ class PresentsController extends Controller
         //
     }
 
+/*     public function filter(Request $request)
+{
+    // Retrieve the filter criteria from the request
+    $filterWord = $request->input('filterWord');
+    $filterTimestamp = $request->input('filterTimestamp');
+    $filterTags = $request->input('filterTags');
+
+    // Query the database to filter gifts
+    $query = Partake::query();
+
+    if (!empty($filterWord)) {
+        $query->where('title', 'LIKE', '%' . $filterWord . '%');
+    }
+
+    if (!empty($filterTimestamp)) {
+        $query->where('timestamp_column_name', 'LIKE', '%' . $filterTimestamp . '%');
+    }
+
+    if (!empty($filterTags)) {
+        $query->where('tags', 'LIKE', '%' . $filterTags . '%');
+    }
+
+    // Get the filtered gifts
+    $filteredGifts = $query->get();
+
+    // Pass the filtered gifts data to the view for rendering
+    return view('testsiteone', ['gifts' => $filteredGifts]);
+} */
+    public function filter(Request $request)
+    {
+        // Retrieve the filter values from the form
+        $filterWord = $request->input('filterWord');
+        $filterTags = $request->input('filterTags');
+        $filterTimestamp = $request->input('filterTimestamp');
+
+        // Query the database using Eloquent
+        $gifts = Partake::query()
+            ->where(function ($query) use ($filterWord) {
+                $query->where('title', 'like', '%' . $filterWord . '%')
+                    ->orWhere('lead', 'like', '%' . $filterWord . '%')
+                    ->orWhere('content', 'like', '%' . $filterWord . '%');
+            })
+            ->where('tags', 'like', '%' . $filterTags . '%')
+            ->when($filterTimestamp, function ($query) use ($filterTimestamp) {
+                // Assuming 'created_at' is your timestamp column
+                return $query->whereDate('created_at', '=', $filterTimestamp);
+            })
+            ->get();
+
+        return view('testsiteone', ['gifts' => $gifts]);
+    }
+
+
+
+
     /**
      * Remove the specified resource from storage.
      */

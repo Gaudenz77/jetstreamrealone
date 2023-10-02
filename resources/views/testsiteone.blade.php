@@ -10,8 +10,35 @@
         <label class="form-check-label" for="viewToggle">Table View</label>
     </div>
 
+    <!-- Filter input fields -->
+    {{-- <div class="input-group mb-3">
+        <form action="{{ route('gifts.filter') }}" method="POST">
+            @csrf
+            <input type="text" name="filterWord" placeholder="Filter by Contains Word">
+            <input type="text" name="filterTimestamp" placeholder="Filter by Timestamp">
+            <input type="text" name="filterTags" placeholder="Filter by Tags">
+            <button type="submit">Filter</button>
+        </form>
+    </div> --}}
+    <div class="input-group mb-3 rounded">
+        <form action="{{ route('gifts.filter') }}" method="POST" class="input-group">
+            @csrf
+            <input type="text" name="filterWord" class="form-control rounded ms-0" placeholder="Filter by Contains Word">
+            <input type="date" name="filterTimestamp" {{-- id="datepicker" --}} class="form-control rounded mx-2" placeholder="Filter by Timestamp">
+            <input type="text" name="filterTags" class="form-control rounded mx-0" placeholder="Filter by Tags">
+            <button type="submit" class="btn btn-outline-secondary rounded mx-2 me-0">Filter/Reset</button>
+        </form>
+    </div>
+    
+      
+      
+
+        
+    
+
+
     <!-- Create a container for the content -->
-    <div id="contentContainer" class="row">
+    <div id="contentContainer" class="row mx-0">
         @foreach($gifts as $gift)
             <div class="col-md-3 mb-4"> <!-- Adjusted to col-md-3 -->
                 <div class="card">
@@ -37,6 +64,7 @@
 </div>
 
 <!-- Add JavaScript for toggling views -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     const viewToggle = document.getElementById('viewToggle');
     const contentContainer = document.getElementById('contentContainer');
@@ -139,6 +167,9 @@
     return tableHTML;
 }
 
+
+
+/* FILTER */
 
 </script>
 @endsection
