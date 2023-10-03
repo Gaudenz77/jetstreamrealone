@@ -56,6 +56,7 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm float-end">Delete</button>
                         </form>
+                        
                     </div>
                 </div>
             </div>
@@ -121,6 +122,7 @@
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm float-end">Delete</button>
                             </form>
+
                         </div>
                     </div>
                 </div>
