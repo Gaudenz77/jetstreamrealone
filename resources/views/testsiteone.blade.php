@@ -11,7 +11,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-3">
-            <h3>Hello Thinkpad</h3>
+            <h3>Byebye Thinkpad</h3>
         </div>
     </div>
     <div class="row justify-content-center">
