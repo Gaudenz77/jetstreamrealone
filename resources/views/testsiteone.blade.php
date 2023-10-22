@@ -14,6 +14,12 @@
             <h3>Hello Thinkpad</h3>
         </div>
     </div>
+    <div class="row justify-content-center">
+        <div class="col-3 d-flex align-items-middle">
+            <h3>Hello WSL!!!</h3>
+            <i class="fa-solid fa-face-grin-squint-tears fa-3x m-3"></i>
+        </div>
+    </div>
 
     <!-- Filter input fields -->
     {{-- <div class="input-group mb-3">
