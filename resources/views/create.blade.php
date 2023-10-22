@@ -34,9 +34,9 @@
             <table class="table table-striped table-dark table-responsive">
                 <thead>
                   <tr>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                    <th>Header 3</th>
+                    <th>Header 10</th>
+                    <th>Header 20</th>
+                    <th>Header 30</th>
                   </tr>
                 </thead>
                 <tbody>
