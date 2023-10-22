@@ -16,7 +16,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-3 d-flex align-items-middle">
-            <h3>Hello WSL!!! - Maybe, ol pal...</h3>
+            <h3>Hello WSL!!! - Maybe, ol pal...and back@ya!!!</h3>
             <i class="fa-solid fa-face-grin-squint-tears fa-3x m-3"></i>
         </div>
     </div>

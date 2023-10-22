@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-6 p-4 bg-success">
+        <div class="col-6 p-4 bg-warning text-light">
             <h1>Create a New Gift</h1>
                 <form method="POST" action="{{ route('gifts.store') }}">
                     @csrf
@@ -28,7 +28,7 @@
                     <button type="submit" class="btn btn-primary">Create Gift</button>
                 </form>
         </div>
-        <div class="col-6 p-4 bg-success">
+        <div class="col-6 p-4 bg-warning">
             <h1>Orders</h1>
 
             <table class="table table-striped table-dark table-responsive">
