@@ -9,6 +9,11 @@
         <input class="form-check-input" type="checkbox" id="viewToggle">
         <label class="form-check-label" for="viewToggle">Table View</label>
     </div>
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <h3>Hello Thinkpad</h3>
+        </div>
+    </div>
 
     <!-- Filter input fields -->
     {{-- <div class="input-group mb-3">
