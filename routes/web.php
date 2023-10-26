@@ -40,6 +40,10 @@ Route::middleware([
         return view('testsiteone'); // Assuming 'create.blade.php' is in your views directory
     })->name('testsiteone'); 
 
+    Route::get('/showroom', function () {
+        return view('showroom');
+    })->name('showroom');
+    
     // Add the routes for creating and storing gifts
     Route::get('/gifts/create', [PresentsController::class, 'create'])->name('gifts.create');
     Route::post('/gifts', [PresentsController::class, 'store'])->name('gifts.store');
