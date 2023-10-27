@@ -16,6 +16,10 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('showroom') }}">Showroom</a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('testsiteone') }}">Testsite</a>
                 </li>
 

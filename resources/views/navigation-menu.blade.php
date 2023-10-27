@@ -20,6 +20,11 @@
                         {{ __('Testsite') }}
                     </x-nav-link>
 
+                    <x-nav-link href="{{ route('showroom') }}">
+                        {{ __('Showroom') }}
+                    </x-nav-link>
+
+
                     <x-nav-link href="{{ route('create') }}">
                         {{ __('Add Entry') }}
                     </x-nav-link>
