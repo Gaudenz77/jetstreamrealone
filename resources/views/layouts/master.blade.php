@@ -28,6 +28,7 @@
             
             /* font-family: 'Fira Sans', sans-serif; */
             /* ackground-color:yellow; */
+            margin-bottom:6rem;
         }
     </style>
 </head>
